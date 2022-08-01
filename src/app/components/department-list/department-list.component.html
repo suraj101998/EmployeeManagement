@@ -1,0 +1,48 @@
+<p align="center">DEPARTMENT  DETAILS</p>
+<div class="container">
+    <table class="table table-bordered  table-striped">
+       <tr align="center">
+        <th>DEPARTMENT NO</th>
+           <th>DEPARTMENT NAME</th>
+           <th>LOCATION</th>
+       </tr>
+
+       <tr *ngFor = "let dep of departments " align="center" >
+        <td> {{dep.deptno}}</td>
+        <td> {{dep.departmentname}}</td>
+        <td> {{dep.location}}</td>                   
+    </tr>
+
+</table>
+</div>
+<p class="head" align="center">DEPARTMENT FORM</p>
+<div class="form-container">
+<form class="ngForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="col-sm-3"><label>DEPARTMENT NUMBER</label></div>
+        <div class="col-sm-3"><input type="text" name="deptno" [(ngModel)]="formModel.deptno"></div>
+    </div>
+    &nbsp;             
+
+    <div class="row">
+        <div class="col-sm-3"><label>DEPARTMENT NAME</label></div>
+        <div class="col-sm-3"><input type="text" name="departmentname" [(ngModel)]="formModel.departmentname"></div>
+    </div>
+    &nbsp;
+
+    <div class="row">
+        <div class="col-sm-3"><label>LOCATION</label></div>
+        <div class="col-sm-3"><input type="text" name="location" [(ngModel)]="formModel.location"></div>
+    </div>
+    &nbsp;
+
+    <div class="row">
+        <div class="col-sm-3"><input type="submit" name="submit" class="btn btn-lg btn-primary"></div>
+        <a class= " home" href="http://localhost:4200/">BACK TO HOME PAGE </a>
+    </div>
+
+</form>
+</div>
+<div align="center">
+    <p class="details">****************All Copyrights Reserved****************</p>
+</div>

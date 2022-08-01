@@ -1,0 +1,92 @@
+<p align="center"> EMPLOYEE DETAILS</p>
+<div class="container">
+    <table class="table table-bordered  table-striped">
+       <tr align="center"> 
+        <th>Employee Number</th>
+        <th>Employee Name</th>
+        <th>Job</th>
+        <th>Hire Date</th>
+        <th>Manager Id</th>
+        <th>Salary</th>
+        <th>Commission</th>
+        <th>Department No</th>
+       </tr>
+
+       <tr *ngFor = "let emp of employees " align="center">
+           <td> {{emp.empno}}</td>
+           <td> {{emp.ename}}</td>
+           <td> {{emp.job}}</td>
+           <td> {{emp.hiredate}}</td>
+           <td> {{emp.managerid}}</td>
+           <td> {{emp.salary | currency :'INR'}}</td>
+           <td> {{emp.commission | currency :'INR'}}</td>
+           <td> {{emp.deptno}}</td>
+                      
+       </tr>
+    </table>
+    </div>
+
+    
+<p class="head" align="center">EMPLOYEE FORM</p>
+<div class="form-container">
+    <form class="ngForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-sm-3"><label>Employee Number</label></div>
+            <div class="col-sm-3"><input type="text" name="empno" [(ngModel)]="formModel.empno"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3"><label>Employee Name</label></div>
+            <div class="col-sm-3"><input type="text" name="ename" [(ngModel)]="formModel.ename" ></div>
+        </div>
+        &nbsp;
+     
+        <div class="row">
+            <div class="col-sm-3"><label>Job</label></div>
+            <div class="col-sm-3"><input type="text" name="job" [(ngModel)]="formModel.job"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3"><label>Hire Date</label></div>
+            <div class="col-sm-3"><input type="text" name="hiredate" [(ngModel)]="formModel.hiredate"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3"><label>Manager Id</label></div>
+            <div class="col-sm-3"><input type="text" name="managerid" [(ngModel)]="formModel.managerid"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3"><label>Salary</label></div>
+            <div class="col-sm-3"><input type="text" name="salary" [(ngModel)]="formModel.salary"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3"><label>Commission</label></div>
+            <div class="col-sm-3"><input type="text" name="commission" [(ngModel)]="formModel.commission"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3"><label>Department No</label></div>
+            <div class="col-sm-3"><input type="text" name="deptno" [(ngModel)]="formModel.deptno"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3 "><input type="submit" name="submit" class="btn btn-lg btn-primary"></div>
+            <a class= "home" href="http://localhost:4200/">BACK TO HOME PAGE </a>
+        </div>
+    
+    </form>
+</div>
+
+<div align="center">
+    <p class="details">****************All Copyrights Reserved****************</p>
+</div>
+
